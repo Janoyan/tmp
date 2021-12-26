@@ -1,6 +1,7 @@
+const _shuffle = require('lodash/shuffle');
 const bluebird = require('bluebird');
 const fetch = require('node-fetch');
-let records = require('./data/records.json');
+let records = _shuffle(require('./data/records.json'));
 
 const servers = [
   'https://idc-images.herokuapp.com/',
